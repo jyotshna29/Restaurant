@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 600px;
+        background-image: linear-gradient(75deg,bisque,rgb(246, 246, 133));
+    }
+    #container {
+        width: 700px;
+        height: 600px;
+        background-image: linear-gradient(75deg,rgb(100, 100, 251),rgb(251, 131, 191));
+        box-shadow: 5px 5px 5px black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 200px;
+        margin-top: 95px;
+    }
+    #info {
+        font-size: 12px;
+        color: white;
+        width: 90%;
+        text-align: justify;
+        text-indent: 50px;
+        position: relative;
+        top: 20px;
+        text-decoration: underline 0.1px white;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .inp {
+        width: 330px;
+        height: 30px;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 5px;
+        box-shadow: 5px 5px 5px black;
+        font-weight: bold;
+        color: rgb(100, 100, 251);
+    }
+    #Mob,#Pass {
+        position: relative;
+        top: 10px;
+        width: 95%;
+    }
+    #doblab,#gen {
+        color: white;
+        font-size: 18px;
+        position: absolute;
+        left: 30px;
+        bottom: 170px;
+        text-shadow: 2px 2px 2px black;
+    }
+    #selop {
+        position: relative;
+        top: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    select {
+        width: 120px;
+        height: 30px;
+        font-size: 18px;
+        background: transparent;
+        color: white;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px black;
+    }
+    option {
+        color: black;
+    }
+    #gen {
+        bottom: 100px;
+    }
+    #gensec {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        font-size: 18px;
+        color: white;
+        justify-content: space-evenly;
+        position: relative;
+        top: 30px;
+    }
+    #signup,#loginBut {
+        width: 220px;
+        height: 40px;
+        position: relative;
+        top: 50px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 5px;
+        text-shadow: 1px 1px 1px black;
+        background-color: greenyellow;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.5s;
+    }
+    #signup:hover, #loginBut:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 5px black;
+    }
+    h1 {
+        position: absolute;
+        left:90px;
+        top: 150px;
+        font-size: 70px;
+        letter-spacing: 10px;
+        color: red;
+        text-shadow: 2px 2px 5px black;
+    }
+    h2 {
+        position: absolute;
+        left: 195px;
+        top: 250px;
+        font-size: 50px;
+        letter-spacing: 10px;
+        color: purple;
+        text-shadow: 2px 2px 5px black;
+    }
+    #loginBut {
+        position: absolute;
+        top: 400px;
+        left: 180px;
+    }
+    #para {
+        font-size: 30px;
+        text-decoration: underline;
+        position: absolute;
+        top: 350px;
+        left: 190px;
+    }
+    #icon {
+        width: 60px;
+        height: 60px;
+        padding-left: 10px;
+        margin-top: 450px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Restaurant</h1>  <br>
+    <h2>Signup</h2>
+    <a href="https://www.google.com/account/about/" target="_blank"><img id="icon" src="google.png"></a>
+    <a href="https://www.facebook.com/" target="_blank"><img id="icon" src="facebook.png"></a>
+    <a href="https://support.apple.com/en-in/HT204053" target="_blank"><img id="icon" src="apple-.png"></a>
+    <div id="container">
+        <form>
+            <section id="1stLayer">
+                <input required class="inp" type="text" placeholder="First Name">
+                <input required class="inp" type="text" placeholder="Sur Name"> <br><br>
+            </section>
+            <input required class="inp" id="Mob" placeholder="Mobile Number or Email Address">
+            <br>
+            <input required type="password" class="inp" id="Pass" placeholder="New Password"> <br>
+            <label id="doblab">Date of Birth</label>
+            <br>
+            <section id="selop">
+                <select>
+                    <option>Date</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+                <select>
+                    <option>Month</option>
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
+                </select>
+                <select>
+                    <option>YYYY</option>
+                    <option>2004</option>
+                    <option>2003</option>
+                    <option>2002</option>
+                    <option>2001</option>
+                    <option>2000</option>
+                    <option>1999</option>
+                    <option>1998</option>
+                </select>
+            </section>
+            <br>
+            <label id="gen">Gender</label>
+            <br>
+            <section id="gensec">
+                <div class="genderCont">
+                    <label>Male</label>
+                    <input type="radio" name="Gender" value="male" onclick="gender(this.value)">
+                </div>
+                <div class="genderCont">
+                    <label>Female</label>
+                    <input type="radio" name="Gender" value="female" onclick="gender(this.value)">
+                </div>
+                <div class="genderCont">
+                    <label>Others</label>
+                    <input type="radio" name="Gender" value="others" onclick="gender(this.value)">
+                </div>
+            </section>
+            <br>
+            <p id="info">
+                This section explains your rights to use the Service, and the conditions that apply 
+                to your use of the Service. It also explains how we may make changes to the Service.
+            </p>
+            <input type="submit" id="signup" value="Signup" onclick="storeTheUserInfo()">
+        </form>
+    </div>
+    <p id="para">Have an account</p>
+    <a href="login.html"><button id="loginBut">Login</button></a>
+
+    <script>
+        function storeTheUserInfo()
+        {
+            var inputTag=document.querySelectorAll("input")
+            var selectTag=document.querySelectorAll("select")
+            console.log(inputTag);
+            var fName=inputTag[0].value
+            var lName=inputTag[1].value
+            var mIdPhn=inputTag[2].value
+            var pass=inputTag[3].value
+            var date=selectTag[0].value
+            var mo=selectTag[1].value
+            var yy=selectTag[2].value
+            window.sessionStorage.setItem("mailIdorPhno",mIdPhn);
+            window.sessionStorage.setItem("pass",pass);
+            window.localStorage.setItem("fname",fName);
+            window.localStorage.setItem("lname",lName);
+            window.localStorage.setItem("mailIdorPhno",mIdPhn);
+            window.localStorage.setItem("pass",pass);
+            window.localStorage.setItem("date",date);
+            window.localStorage.setItem("mo",mo);
+            window.localStorage.setItem("yy",yy);
+        }
+        var gender=function gender(a)
+        {
+            window.localStorage.setItem("gender",a);
+        }
+    </script>
+</body>
+</html>

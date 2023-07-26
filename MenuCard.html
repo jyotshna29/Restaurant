@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+    #clos {
+        font-size: 40px;
+        font-weight: bold;
+        color: red;
+        float: right;
+        margin-top: 0px;
+        margin-right: 45px;
+    }
+    #clos:hover {
+        transform: scale(1.3);
+    }
+    #d {
+        position: absolute;
+        top: 35px;
+    }
+    #f1 {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 50px;
+        left: 600px;
+    }
+    #f2 {
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: 50px;
+        left: 180px;
+    }
+    #i1 {
+        width: 150px;
+        height: 150px;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    .i11 {
+        position: absolute;
+        top: 165px;
+        left: 1080px;
+    }
+    .i12 {
+        position: absolute;
+        top: 165px;
+        left: 918px;
+    }
+    .i13 {
+        position: absolute;
+        top: 89px;
+        left: 1000px;
+    }
+    .i14 {
+        position: absolute;
+        top: 220px;
+        left: 1020px;
+    }
+    #i2,#i3 {
+        width: 100px;
+        height: 100px;
+        border-radius: 200%;
+        display: flex;
+        flex-direction: column;
+    }
+    #i2:hover, #i3:hover {
+        transform: scale(1.1);
+    }
+    #i5 {
+        width: 110px;
+        height: 35px;
+        position: absolute;
+        top: 45px;
+        right: 350px;
+    }
+    #mc {
+        color: crimson;
+        font-size: 35px;
+        margin-left: 55px;
+        text-shadow: 2px 3px 5px black;
+        font-family: 'Poltawski Nowy', serif;
+    }
+    #field1 {
+        width: 35%;
+        height: 85vh;
+        float: left;
+        margin: 30px 10px 10px 155px;
+        border: 4px solid black;
+        background-image: url("f1.jpg");
+        background-position: 130%;
+    }
+    #p1 {
+        height: 26px;
+        background:black;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+    #mar {
+        background-color: yellow;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #field2 {
+        width: 35%;
+        height: 85vh;
+        background-image: url("f14.jpeg");
+        background-position: 100%;
+        float: right;
+        margin: 30px 95px 10px 10px;
+        border: 4px solid black;
+    }
+    #items {
+        color: yellow;
+        font-size: 20px;
+        position: absolute;
+        top: 300px;
+        right: 300px;
+    }
+    </style>
+</head>
+<body style="height: 500px;">
+    <a href="./food.html"><p id="clos">X</p></a>
+    
+    <fieldset id="field1">
+        <div>
+            <center>
+                <h3 style="font-size: 30px; color: yellow; text-shadow: 2px 5px 7px black;">JYOTSHNA PRESENTS</h3>
+                <img style="width: 180px; height: 80px;" src="food.png"> <br>
+                <img style="width: 150px; height: 50px;" src="f12.png">
+                <h3>Family - Food - Restaurant</h3>
+                <img style="width: 40px; height: 40px;" src="f11.png">
+                <h2>Contact Us</h2>
+                    <h4>
+                        <img style="width: 20px; height: 20px;" src="f9.png">&nbsp; +1234567890 &nbsp;&nbsp;&nbsp; 
+                        <img style="width: 20px; height: 20px;"" src="f10.png">&nbsp;&nbsp;www.foodlover.com
+                        <p>Oakdale Avenue Sebring</p><p>FL 33868</p>
+                    </h4>
+                </div>
+            </center>
+        <marquee id="mar">FREE DELIVERY</marquee>
+        <div>
+            <p id="p1">BURGER-PIZZA-BIRYANI-PASTA-ICE CREAM-COOL DRINKS</p>
+        </div>
+    </fieldset>
+
+    <fieldset id="field2">
+        <img id="i5" src="f12.png">
+        <img id="f1" src="f3.png">
+        <img id="f2" src="f13.png">
+        <img id="i1" class="i11" src="0.jpg">
+        <img id="i1" class="i12" src="11.jpg">
+        <img id="i1" class="i13" src="home3.jpg">
+        <img id="i2" class="i14" src="7.avif">
+        <div id="i4">
+            <img id="i3" src="f2.jpeg">
+            <img id="i3" src="f4.png">
+            <img id="i3" src="f5.jpg">
+            <img id="i3" src="14.jpeg">
+            <img id="i3" src="s11.jpg">
+        </div>
+        <div id="items">
+            <h4>Burger &nbsp;&nbsp; $ 15.50 <br> Pizza &nbsp;&nbsp; $ 20.99 <br> Veg Soup &nbsp;&nbsp; $ 19.10 <br> Shawarma &nbsp;&nbsp; $ 28.45
+                <br> Chicken Lollipop &nbsp;&nbsp; $ 35.90 <br> Biryani &nbsp;&nbsp; $ 62.30 <br> Natukodi Pulusu &nbsp;&nbsp; $ 49.29 <br>
+                Fish Curry &nbsp;&nbsp; $ 45.59 <br> Mango Juice &nbsp;&nbsp; $ 15.99 <br> Kulukki Sarbath &nbsp;&nbsp; $ 15.15
+                <br> Sorbet Icecream &nbsp;&nbsp; $ 20.20 <br> Gulab Jamun &nbsp;&nbsp; $ 13.50
+            </h4>
+        </div>
+    </fieldset>
+
+    <div id="d">
+        <h1 id="mc">M</h1><h1 id="mc">E</h1><h1 id="mc">N</h1><h1 id="mc">U</h1> <br><br>
+        <h1 id="mc">C</h1><h1 id="mc">A</h1><h1 id="mc">R</h1><h1 id="mc">D</h1>
+    </div>
+</body>
+</html>

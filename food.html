@@ -1,0 +1,246 @@
+<html>
+<head>
+    <title>About Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="food.css">
+    <script src="food.js" defer></script>
+</head>
+<body onload="welcome1()"> 
+    <nav id="navigation">
+        <a href="#"><img class="uten" src="utensils.png"></img><i style="font-size: 50px; letter-spacing: 3px;">Resto.</i></a>
+        <a href="#home"><b>home</b></a>
+        <a href="#dishes"><b>dishes</b></a>
+        <a href="#about"><b>about</b></a>
+        <a href="#menu"><b>menu</b></a>
+        <a href="#review"><b>review</b></a>
+        <a href="#order"><b>order</b></a>
+        <a href="Search.html"><img class="logo" src="search.png" onclick="search()"></img></a>
+        <a href="#"><img class="logo" src="heart.png" onclick="wishlist()"></img></a>
+        <a href="#"><img class="logo" src="shopping-cart.png" onclick="cart()"></img></a>
+        <img class="logo" src="user.png" onclick="acc()">
+        <a href="login.html"><h2 style="font-size: 20px; color: black;" class="logo">Logout</h2></a>
+    </nav>
+   
+    <section id="home">
+        <section id="sec">
+            <h2 id="head">Our Special Dish</h2>
+            <h1 id="header">Fried Chicken</h1>
+            <p id="info">Done properly, deep-frying creates a satisfying contrast between the crispy-crunchy coating and 
+                tender chicken. Beyond that simple textural enjoyment, the crispness actually sends our brain a message 
+                that the food itself is in good condition.
+            </p>
+            <div id="home1"></div>
+            <input id="but" type="button" value="Order now" onclick="ordered()">
+        </section>
+        <section id="sec1">
+            <h2 id="head">Our Special Dish</h2>
+            <h1 id="header">Hot Pizza</h1>
+            <p id="info">pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination 
+                of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually
+                , in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot.
+            </p>
+            <div id="home2"></div>
+            <input id="but" type="button" value="Order now" onclick="ordered()">
+        </section>
+        <section id="sec2">
+            <h2 id="head">Our Special Dish</h2>
+            <h1 id="header">Spicy Noodles</h1>
+            <p id="info">These Spicy Noodles are just the thing you might want in your life. They are absolutely fiery delicious, 
+                a perfect balance of HOT with a good dose of umami and a tad bit of sweet. These spicy garlic noodles are perfect 
+                for lazy days, as they happen in under 15 minutes, and can be customizable in so many ways.
+            </p>
+            <div id="home3"></div>
+            <input id="but" type="button" value="Order Now" onclick="ordered()">
+        </section>
+    </section>
+
+    <section id="dishes" style="width: 1445px;">
+        <center><h1>Our Dishes</h1><h2>POPULAR DISHES</h2></center>
+            <div id="header1" style="margin-top: 30px;">
+                <button id="left" onclick="left()"><b><</b></button>
+                <button id="right" onclick="right()"><b>></b></button>
+            </div>
+    </section> <br>
+
+    <section id="about" style="height: 600px; width: 1445px;">
+        <center><h1>About Us</h1><h2>WHY CHOOSE US?</h2>
+            <h3 id="head1">Best Food In The Country</h3>
+            <p id="about1">
+                The taste and quality of the food is what keeps the customers hooked to a restaurant. Food that is cooked to perfection has 
+                the capability to make up for anything that goes wrong in the customer's dine-in experience. Food quality is the key attribute 
+                that drives customers to choose a restaurant over others.The most important factor to consider our Restaurant, which most people 
+                will do, is the quality of service or food offered. Other factors are good value, good service, cleanliness, quality food and drink. 
+                All point to experience, just as we have for decades. Factors like speed, delivery, online ordering and technology are increasingly 
+                important, and we may determine restaurant's ability to deliver “good value.”
+            </p>
+            <input id="in1" type="button" value="Free Delivery"><img id="icon" src="delivery.png">
+            <input id="in1" type="button" value="Easy Payments"><img id="icon" style="margin-left: -15px;" src="dollar.png">
+            <input id="in1" type="button" value="24/7 Service"><img id="icon" style="margin-left: 10px;" src="headset.png">
+        </center>
+        <div id="home4"></div>
+        <input id="in2" type="button" value="Learn More">
+    </section>
+
+    <section id="menu" style="width: 1445px;">
+        <center><h1>Our Menu</h1><h2>TODAY'S SPECIALITY</h2></center>
+        <a href="MenuCard.html"><input type="button" value="MENU CARD" id="mcard"></a>
+        <div id="menu1">
+            <div>
+                <div><img id="i2" src="s0.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Burger</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 15.50</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s1.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Pizza</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 20.99</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s2.jpg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Veg Soup</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 19.10</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+            </div>
+            <div>
+                <div><img id="i2" src="s3.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Shawarma</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 28.45</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s4.jpg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Chicken Lollipop</p>
+                    <img style="width: 110px; height: 23px; margin-left: 50px;" src="star1.png">
+                    <p id="m2">$ 35.90</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s5.jpg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Prawns Biryani</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 62.30</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+            </div>
+            <div>
+                <div><img id="i2" src="s6.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">NaatuKodi Pulusu</p>
+                    <img style="width: 110px; height: 23px; margin-left: 50px;" src="star1.png">
+                    <p id="m2">$ 49.29</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s7.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Fish Curry</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 45.59</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s8.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Mango Juice</p>
+                    <img style="width: 110px; height: 23px; margin-left: 50px;" src="star1.png">
+                    <p id="m2">$ 15.99</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+            </div>
+            <div>
+                <div><img id="i2" src="s9.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Kulukki Sarbath</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 15.15</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s10.jpeg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Sorbet Icecream</p>
+                    <img style="width: 110px; height: 23px; margin-left: 50px;" src="star1.png">
+                    <p id="m2">$ 20.20</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+                <div><img id="i2" src="s11.jpg"><img id="i3" src="love.png">
+                    <p style="font-size: 25px; margin-left: 50px;">Gulab Jamun</p>
+                    <img style="width: 100px; height: 20px; margin-left: 50px;" src="star.png">
+                    <p id="m2">$ 13.50</p><input id="inp" type="button" value="Add To Cart" onclick="added()"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="review" style="height: 450px; width: 1445px;">
+        <center><h3>Customer's Review</h3><h2>WHAT THEY SAY</h2></center>
+        <div id="rev1">
+            <div id="rev">
+                <img id="re1" src="img0.jpeg"><img id="re2" src="quote.png"><h1>Nithya Naidu</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">Wow! Really good food, I must say that the waitress today was so kind and patient with the service. My husband and I love dinner there as well.</p>
+            </div>
+            <div id="rev">
+                <img id="re1" src="img1.jpeg"><img id="re2" src="quote.png"><h1>Krish</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">One of the best places I've eaten. Great cocktails, awesome. We are so fortunate to have this outstanding restaurant in our town. It's a gem.</p>
+            </div>
+            <div id="rev">
+                <img id="re1" src="img2.jpeg"><img id="re2" src="quote.png"><h1>Aarnav</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">Came for lunch with my sister. We loved Chicken Lollipop which were amazing with lots of flavour, very impressive for a Non-vegetarian restaurant.</p>
+            </div>
+            <div id="rev">
+                <img id="re1" src="img3.jpeg"><img id="re2" src="quote.png"><h1>Lucinda</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">Very good service, good menu, not overly expensive. Food quality was very good. They know how to prepare home fries and their non veg items are top-notch.</p>
+            </div>
+            <div id="rev">
+                <img id="re1" src="img4.jpeg"><img id="re2" src="quote.png"><h1>Ehan</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">The food was excellent.  I had the Pizza and a burger over greens which were awesome. The restaurant has a vey nice ambiance and a cozy dining.</p>
+            </div>
+            <div id="rev">
+                <img id="re1" src="img5.jpeg"><img id="re2" src="quote.png"><h1>Larisa</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">Amazing! This casual dining restaurant was special! I had the Chicken biryani with chicken wings, the dish was to die for! They really served good.</p>
+            </div>
+            <div id="rev">
+                <img id="re1" src="img6.jpeg"><img id="re2" src="quote.png"><h1>Hardhik</h1>
+                <img style="width: 100px; height: 20px;" src="star.png">
+                <p id="re3">Normally wings are wings, but theirs are lean meaty and tender, and delicious homemade teriaki glaze. Gluten free pizza way better than most.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" style="width: 1445px;">
+        <center><h1>Order Now</h1><h2>FREE AND FAST</h2></center>
+        <form id="form" style="font-size: 17px; margin-top: 30px; margin-left: 500px;">
+            <label>Your Name &nbsp;&nbsp;&nbsp;</label><input id="ord" type="text" placeholder="Enter your name"> <br><br>
+            <label>Your Number &nbsp;&nbsp;&nbsp;</label><input id="ord" type="number" placeholder="Enter your number"> <br><br>
+            <label>Your Order &nbsp;&nbsp;&nbsp;</label><input id="ord" placeholder="Enter food name"> <br><br>
+            <label>Additional Order &nbsp;&nbsp;&nbsp;</label><input id="ord" placeholder="Extra with food"> <br><br>
+            <label>How Much &nbsp;&nbsp;&nbsp;</label><input id="ord" type="number" placeholder="How many orders"> <br><br>
+            <label>Date &nbsp;&nbsp;&nbsp;</label><input id="ord" type="date" placeholder="dd-mm-yyyy"> <br><br>
+            <label>Your Address &nbsp;&nbsp;&nbsp;</label><textarea id="ord" placeholder="Enter your address"></textarea> <br><br>
+            <label>Your Message &nbsp;&nbsp;&nbsp;</label><textarea id="ord" placeholder="Enter your message"></textarea> <br><br><br>
+            <input id="sub" type="submit" value="Order Now" onclick="ordered()"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="sub" type="reset" value="Cancel">
+        </form>
+    </section>
+    <section id="sec3" style="width: 1445px;">
+            <ul>
+                <li><h1>Locations</h1></li>
+                <li>India</li>
+                <li>Japan</li>
+                <li>Russia</li>
+                <li>USA</li>
+                <li>London</li>
+                <li>France</li>
+            </ul>
+            <ul>
+                <li><h1>Quick Links</h1></li>
+                <a href="#home"><li>Home</li></a>
+                <a href="#dishes"><li>Dishes</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#menu"><li>Menu</li></a>
+                <a href="#review"><li>Review</li></a>
+                <a href="#order"><li>Order</li></a>
+            </ul>
+            <ul>
+                <li><h1>Contact Info</h1></li>
+                <li>+91-99887 54755</li>
+                <li>+12- 161 524 238</li>
+                <li>+123-111 222 333</li>
+                <li>Shaikhansi@gmail.com</li>
+                <li>AP.India@gmail.com</li>
+                <li>krishna@gmail.com</li>
+            </ul>
+            <ul>
+                <li><h1>Follow Us</h1></li>
+                <a href="https://www.facebook.com/" target="_blank"><li>Facebook</li></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><li>Whatsapp</li></a>
+                <a href="https://twitter.com/i/flow/login" target="_blank"><li>Twitter</li></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank"><li>Instagram</li></a>
+                <a href="https://in.linkedin.com/" target="_blank"><li>LinkedIn</li></a>
+                <a href="https://accounts.snapchat.com/accounts/v2/login" target="_blank"><li>Snapchat</li></a>
+            </ul>
+    </section>
+    <center style="margin-top: 30px; height: 20px; width: 1445px;"><h1>Copyright @ 2023 By <b style="color: green;">Jyotshna</b></h1></center>
+</body>
+</html>

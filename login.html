@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    body {
+        background-image: linear-gradient(75deg,grey,purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 700px;
+    }
+    #outerCont {
+        width: 900px;
+        height: 500px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+        background-image: linear-gradient(75deg,magenta,royalblue);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    #innerCont {
+        width: 380px;
+        height: 350px;
+        background-color: black;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: 5px 5px 5px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        bottom: 100px;
+    }
+    #heading {
+        width: 380px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 10px;
+        font-size: 40px;
+        display: block;
+        letter-spacing: 10px;
+    }
+    .inputdiv {
+        width: 280px;
+        height: 30px;
+        margin-top: 20px;
+        border-radius: 200px;
+        border: 4px solid royalblue;
+        position: relative;
+        left: 45px;
+    }
+    .inputTags {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 200px;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+    #passVis {
+        width: 25px;
+        border-radius: 100px;
+        border: 4px solid royalblue;
+        position: absolute;
+        top: -1px;
+        right: 0px;
+    }
+    #passdiv {
+        position: relative;
+    }
+    #loginBut,#in {
+        background-color: transparent;
+        border: 3px solid lawngreen;
+        border-radius: 200px;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 25px;
+        left: 125px;
+        width: 150px;
+        height: 30px;
+        color: pink;
+    }
+    #status {
+        color: red;
+        font-size: 21px;
+        text-align: center;
+    }
+    #para {
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline;
+        position: absolute;
+        left: 550px;
+        bottom: 140px;
+    }
+    #in {
+        bottom: 140px;
+        left: 760px;
+        color: maroon;
+    }
+    </style>
+</head>
+<body>
+    <div id="outerCont">
+        <div id="innerCont">
+            <h1 id="heading">Login</h1>
+            <form>
+                <div class="inputdiv">
+                    <input class="inputTags" placeholder="Enter the Email">
+                </div>
+                <div class="inputdiv" id="passdiv">
+                    <input class="inputTags" type="password" placeholder="Enter the Password">
+                    <img id="passVis" src="closedeye.png" onmousedown="passvis()" onmouseup="passHid()">
+                </div>
+                <p id="status"></p>
+                <input type="button" value="Login" id="loginBut" onclick="passvalid()" onmousedown="bigButton()" onmouseup="smallButton()">
+        </div>
+        </form>
+        <p id="para">Have no account</p>
+        <a href="index.html"><input id="in" type="button" value="Signup"></a>
+    </div>
+
+
+    <script>
+        var emailIdorPhno=localStorage.getItem("mailIdorPhno")
+        var pass=localStorage.getItem("pass")
+        var form=document.forms;
+        function passvalid()
+        {
+            var inputTags=document.querySelectorAll("input")
+            var userGivenMailorPhno=inputTags[0].value
+            var userGivenPassword=inputTags[1].value
+            var borders=document.getElementsByClassName("inputdiv")
+            if(emailIdorPhno!=userGivenMailorPhno && pass!=userGivenPassword)
+            {
+                document.body.style.backgroundImage="linear-gradient(75deg,red,red)"
+                borders[0].style.borderColor="red"
+                borders[1].style.borderColor="red"
+                document.getElementById("status").innerHTML="UserId and Password is wrong"
+            }
+            else if(emailIdorPhno==userGivenMailorPhno && pass!=userGivenPassword)
+            {
+                document.body.style.backgroundImage="linear-gradient(75deg,hotpink,red)"
+                borders[0].style.borderColor="royalblue"
+                borders[1].style.borderColor="red"
+                document.getElementById("status").innerHTML="Password is Wrong"
+            }
+            else if(emailIdorPhno!=userGivenMailorPhno && pass==userGivenPassword)
+            {
+                document.body.style.backgroundImage="linear-gradient(75deg,red,purple)"
+                borders[0].style.borderColor="red"
+                borders[1].style.borderColor="royalblue"
+                document.getElementById("status").innerHTML="EmailId or Phone Number is wrong"
+            }
+            else    
+            {
+                form[0].action="food.html"
+                form[0].elements[2].type="Submit"
+            }
+        }
+        function passvis()
+        {
+            form[0].elements[1].type="text"
+            document.getElementById("passVis").src="eye.png"
+            document.getElementById("passVis").style.transform="rotateY(180deg)"
+            document.getElementById("passVis").style.transition="transform 0.5s"
+        }
+        function passHid()
+        {
+            form[0].elements[1].type="password"
+            document.getElementById("passVis").src="closedeye.png"
+            document.getElementById("passVis").style.transform="rotateY(0deg)"
+            document.getElementById("passVis").style.transition="transform 0.5s"
+        }
+        function bigButton()
+        {
+            form[0].elements[2].style.transform="scale(1.2)"
+            form[0].elements[2].style.backgroundColor="transperant"
+        }
+        function smallButton()
+        {
+            form[0].elements[2].style.transform="scale(1)"
+            form[0].elements[2].style.backgroundColor="transperant"
+        }
+    </script>
+</body>
+</html>
